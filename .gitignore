@@ -1,3 +1,6 @@
+# Created by https://www.gitignore.io/api/android
+
+### Android ###
 # Built application files
 *.apk
 *.ap_
@@ -27,14 +30,7 @@ proguard/
 *.log
 
 # Android Studio Navigation editor temp files
-.navigation/
+.navi
 
-# Android Studio captures folder
-captures/
-
-# Intellij
+.idea/
 *.iml
-.idea/workspace.xml
-
-# Keystore files
-*.jks
