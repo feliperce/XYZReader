@@ -6,6 +6,7 @@
     android:layout_marginRight="4dp"
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp"
+    android:elevation="@dimen/card_elevation"
     app:cardCornerRadius="2dp"
     android:clickable="true"
     android:focusable="true"
