@@ -9,7 +9,8 @@
         android:id="@+id/photo_container"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:elevation="4dp"
+        android:elevation="@dimen/appbar_elevation"
+        android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
 
@@ -18,8 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
 
@@ -43,20 +42,20 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:id="@+id/nestedScrollView">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <TextView
             android:id="@+id/article_body"
             style="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/content_margin_top_bottom"
             android:layout_marginBottom="@dimen/content_margin_top_bottom"
             android:layout_marginLeft="@dimen/content_margin_left_right"
             android:layout_marginRight="@dimen/content_margin_left_right"
+            android:layout_marginTop="@dimen/content_margin_top_bottom"
             android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
             android:textColorLink="@color/theme_accent" />
 
@@ -66,14 +65,14 @@
         android:id="@+id/share_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|left"
+        android:layout_gravity="center_vertical|end"
         android:layout_margin="@dimen/content_margin_left_right"
         android:background="@color/theme_accent"
         android:contentDescription="@string/action_share"
         android:elevation="@dimen/fab_elevation"
         android:src="@drawable/ic_share"
         app:fabSize="normal"
-        app:layout_anchor="@+id/collapsingToolBar"
-        app:layout_anchorGravity="bottom|right"/>
+        app:layout_anchor="@+id/photo_container"
+        app:layout_anchorGravity="bottom|right" />
 
 </android.support.design.widget.CoordinatorLayout>
